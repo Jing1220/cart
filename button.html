@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pseudo {
+  position: relative;
+  /* color, paddings, etc. */
+  padding: .5em 1.5em;
+  font-family: helvetica;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pseudo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    /* 背景色設在偽元素上 */
+    background: #e0703c;
+    transform: skew(-35deg);
+}
+</style>
+<body>
+    <a href="#" class="pseudo">
+        BUTTON
+    </a>
+</body>
+</html>
